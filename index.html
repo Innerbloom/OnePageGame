@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+
+    let input;
+    let number;
+    let random = Math.floor(Math.random()*100);
+    let count = 0;
+
+    while ((input = prompt("Загадано число от 0 до 99. Попробуйте угадать")) !== null) {
+      if ((number = +input) != parseFloat(input)) {
+        alert("Введите число!");
+      } else if (number > random) {
+        count++;
+        alert("Меньше!");
+      } else if (number < random) {
+        count++;
+        alert("Больше!");
+      } else if (number == random) {
+        alert(`Правильно вы угадали с ${count} попытки!`)
+        break;
+      }
+    }
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
